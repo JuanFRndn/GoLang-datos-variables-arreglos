@@ -57,4 +57,38 @@ func main() {
 	lista4 = lista3[:3]
 	fmt.Println(lista4)
 
+	//mapas
+	var mapa1 = map[string]string{
+		"Colombia":  "Bogota",
+		"Venezuela": "Caracas",
+	}
+	fmt.Println(mapa1)
+	fmt.Println(mapa1["Colombia"])
+
+	mapa2 := map[string]string{
+		"R": "Red",
+		"G": "Green",
+		"B": "Blue",
+	}
+	fmt.Println(mapa2)
+
+	mapa3 := map[string][]string{
+		"1234567890": {"Pepito", "Perez", "Bogota", "Colombia"},
+		"1324567890": {"Mauro", "Cuartas", "Bogota", "Colombia"},
+		"1243567890": {"Juanito", "Alimaña", "Cali", "Colombia"},
+		"1235467890": {"Pepito", "Castaño", "Medellin", "Colombia"},
+		"1234657890": {"Carlos", "Perez", "Bogota", "Colombia"},
+	}
+	fmt.Println(mapa3)
+	fmt.Println("el usuario 1243567890 tiene la información ", mapa3["1243567890"])
+
+	//agregarle un elemento a un mapa
+	mapa1["Argentina"] = "Buenos aires"
+	fmt.Println(mapa1)
+
+	//eliminar elementos de un mapa
+	delete(mapa2, "R")
+	fmt.Println(mapa2)
+
+	fmt.Println(mapa2["R"])
 }
